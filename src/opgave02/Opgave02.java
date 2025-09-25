@@ -3,7 +3,60 @@ package opgave02;
 public class Opgave02 {
     public static void main(String[] args) {
         char[] characterArray = getCharacterArray();
+        printAraay(vokalCount(characterArray));
+        System.out.println();
+        System.out.println();
+        leetChanger(characterArray);
+
     }
+
+    public static void printAraay(int[] array) {
+        System.out.println("Dit array indeholde følgende tal:");
+        for (int index = 0; index < array.length; index++) {
+            System.out.print(array[index] + " ");
+        }
+    }
+    public static int[] vokalCount(char[] array) {
+        int[] count = new int[9]; //Alle vokaler
+        for (int i = 0; i < array.length; i++){
+            if (array[i] == 'a'){
+                count[0]++;
+            } else if (array[i]=='e') {
+                count[1]++;
+            }else if (array[i]=='i') {
+                count[2]++;
+            }else if (array[i]=='o') {
+                count[3]++;
+            }else if (array[i]=='u') {
+                count[4]++;
+            }else if (array[i]=='y') {
+                count[5]++;
+            }else if (array[i]=='æ') {
+                count[6]++;
+            }else if (array[i]=='ø') {
+                count[7]++;
+            }else if (array[i]=='å') {
+                count[8]++;
+            }
+        }
+
+            return count;
+    }
+        public static void leetChanger(char[] array) {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == 'a') {
+                    array[i] = '4';
+                } else if (array[i] == 'e') {
+                    array[i] = '3';
+                } else if (array[i] == 'i') {
+                    array[i] = '|';
+                } else if (array[i] == 'o') {
+                    array[i] = '0';
+                }
+            }
+            System.out.println(array);
+        }
+
 
     private static char[] getCharacterArray() {
         return ("Der var så dejligt ude på landet; det var sommer, kornet stod gult, havren grøn, " +
