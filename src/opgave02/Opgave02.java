@@ -10,7 +10,7 @@ public class Opgave02 {
 
     }
 
-    public static void printAraay(int[] array) {
+    public static void printAraay(int[] array
         System.out.println("Dit array indeholde følgende tal:");
         for (int index = 0; index < array.length; index++) {
             System.out.print(array[index] + " ");
